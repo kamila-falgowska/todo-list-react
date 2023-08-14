@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Container = ({children}) => (
+const Container = ({ children }) => (
     <body className="container">
         {children}
     </body>

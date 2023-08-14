@@ -1,0 +1,32 @@
+@media(max-width:767px) {
+    .buttons__button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        padding: 7px;
+    }
+
+    .buttons {
+        margin-bottom: 20px;
+    }
+}
+
+.buttons__button {
+    border: 0;
+    background: none;
+    color: teal;
+    transition: 0.4s;
+}
+
+.buttons__button:hover {
+    color: hsl(180, 100%, 40%);
+}
+
+.section__header--noneBorder {
+    border: none;
+}
+
+.buttons__button:disabled {
+    color: #ccc;
+}
