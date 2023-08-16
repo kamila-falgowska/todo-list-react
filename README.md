@@ -19,16 +19,12 @@ This project is a web application designed to enable users to conveniently add a
 
 ## Used in this project
 - HTML
-- CSS
-- BEM convention
-- Grid
-- MediaQueries
-- JavaScript
-- JSX
-- Flex
-- React
-- Webpack
-- Babel
+- CSS (grid, flex, media-queries)
+- BEM
+- REACT
+- JavaScript ES6 + features
+- Markdown
+- Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
