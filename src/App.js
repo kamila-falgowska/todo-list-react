@@ -20,7 +20,6 @@ function App() {
         title="Dodaj nowe zadanie"
         body={<Form />}
       />
-
       <Section
         title="Lista Zadań"
         body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
