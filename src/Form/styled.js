@@ -1,29 +1,33 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
 
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const Input = styled.input`
-  padding: 10px;
-  border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 export const Button = styled.button`
-  padding: 10px;
-  background: hsl(210, 95%, 49%);
-  color: white;
-  border: none;
-  transition: 0.3s;
+    padding: 10px;
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
+    border: none;
+    transition: 0.3s;
 
-  &:hover {
-    background: hsl(210, 95%, 56%);
-    transform: scale(1.1);
-  }
+    &:hover {
+        background: ${({ theme }) => theme.colors.primaryHover};
+        transform: scale(1.1);
+    }
+
+    &:active {
+        background: ${({ theme }) => theme.colors.primaryActive};
+    }
 `;

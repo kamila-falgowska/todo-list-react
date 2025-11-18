@@ -12,40 +12,40 @@ export const Item = styled.li`
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
-    ${({ hidden }) => hidden && css`
-    display: none;
+    ${({ $hidden }) => $hidden && css`
+        display: none;
     `}
 `;
 
 export const Content = styled.span`
-    ${({ done }) => done && css`
-    text-decoration: line-through;
+    ${({ $done }) => $done && css`
+        text-decoration: line-through;
     `}
 `;
 
 export const Button = styled.button`
     border: none;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     width: 30px;
     height: 30px;
     padding: 0;
     transition: background 0.3s;
 
-    ${({ toggleDone }) => toggleDone && css`
-        background: hsl(120, 61%, 34%);
+    ${({ $toggleDone, theme }) => $toggleDone && css`
+        background: ${theme.colors.toggleDone};
 
         &:hover {
-            background: hsl(120, 61%, 39%);
+            background: ${theme.colors.toggleDoneHover};
         }
     `}
 
-    ${({ remove }) => remove && css`
-        background: hsl(348, 83%, 47%);
+    ${({ $remove, theme }) => $remove && css`
+        background: ${theme.colors.remove};
 
         &:hover {
-            background: hsl(348, 83%, 52%);
+            background: ${theme.colors.removeHover};
         }
     `}
 `;

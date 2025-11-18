@@ -7,6 +7,7 @@ const getInitialTasks = () => {
 
 export const useTasks = () => {
     const [tasks, setTasks] = useState(getInitialTasks);
+    const [hideDone, setHideDone] = useState(false);
 
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -39,11 +40,15 @@ export const useTasks = () => {
         setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
     };
 
+    const toggleHideDone = () => setHideDone(h => !h);
+
     return {
         tasks,
         addTask,
         removeTask,
         toggleTaskDone,
         setAllDone,
+        hideDone,
+        toggleHideDone,
     };
 };

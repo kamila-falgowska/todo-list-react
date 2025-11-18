@@ -1,46 +1,54 @@
-import { useState } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
+import { Container } from "./Container/styled";
 import { useTasks } from "./useTasks";
+import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
-  const { tasks, addTask, removeTask, toggleTaskDone, setAllDone } = useTasks();
-  const [hideDone, setHideDone] = useState(false);
-
-  const toggleHideDone = () => setHideDone(h => !h);
+  const {
+    tasks,
+    addTask,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+    hideDone,
+    toggleHideDone
+  } = useTasks();
 
   return (
-    <Container>
-      <Header title="Lista zadań" />
-      <Section
-        title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addTask} />}
-      />
+    <>
+      <GlobalStyle />
+      <Container>
+        <Header title="Lista zadań" />
+        <Section
+          title="Dodaj nowe zadanie"
+          body={<Form addNewTask={addTask} />}
+        />
 
-      <Section
-        title="Lista zadań"
-        body={
-          <Tasks
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />
-        }
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
-          />
-        }
-      />
-    </Container>
+        <Section
+          title="Lista zadań"
+          body={
+            <Tasks
+              tasks={tasks}
+              hideDone={hideDone}
+              removeTask={removeTask}
+              toggleTaskDone={toggleTaskDone}
+            />
+          }
+          extraHeaderContent={
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+              setAllDone={setAllDone}
+            />
+          }
+        />
+      </Container>
+    </>
   );
 }
 
