@@ -1,29 +1,51 @@
 # To do list
 
-## Demo
+## 📌 Description
 
-https://kamila-falgowska.github.io/todo-list-react/
+A modern and fully functional task management application built with **React**, **Redux Toolkit**, and **Redux-Saga**. The app allows you to easily add, browse, filter, complete, and manage your tasks. It also supports saving tasks to **localStorage**, loading **example tasks**, dynamic **routing**, and includes an **author page**.
 
-## Description
+## 🚀 Features
 
-This project is a web application designed to enable users to conveniently add and manage tasks. It is a tool that allows for effective organization of daily responsibilities, projects, or to-do lists.
+### ✔️ Task Management
+- Add new tasks  
+- Mark tasks as completed / uncompleted  
+- Hide completed tasks  
+- Mark all tasks as done  
+- Delete tasks  
 
-## Features
+### 🔍 Filtering & Search
+- Live task filtering using a search bar  
+- Filtering stored in URL query parameters (`?szukaj=...`)  
+- Refresh-safe and shareable filters  
 
-- Task Creation: The application allows users to add new tasks.
-- Marking Tasks as Completed: Once a task is finished, users can mark it as completed to differentiate it from tasks that are still in progress.
-- Task Hiding: There is an option to hide tasks that have already been completed.
-- Task Deletion: There is an option to delete tasks that have already been completed or are no longer needed.
+### 🌐 Routing
+- Dynamic routes using **React Router**
+  - `/zadania` – task list  
+  - `/zadania/:id` – task details page  
+  - `/autor` – author information page  
 
-## Used in this project
-- HTML
-- CSS (Grid, Flex, Media-Queries)
-- BEM
-- React
-- JavaScript (ES6) 
-- Markdown
-- Create React App
+### 🔄 Async Features (Redux-Saga)
+- Load example tasks from `exampleTasks.json`  
+- Built-in loading and error handling  
+- Automatically save tasks to `localStorage` after every change  
 
+### 🎨 UI & Styling
+- Styled with **styled-components**  
+- Responsive layout  
+- Custom theme & global styles  
+- Clean, accessible interface  
+
+## 🛠️ Technologies Used
+- **React**
+- **Redux Toolkit**
+- **Redux-Saga**
+- **React Router**
+- **styled-components**
+- **JavaScript (ES6+)**
+- **CSS (Grid & Flexbox)**
+- **localStorage**
+- **Create React App**
+- **Markdown**
 
 # Getting Started with Create React App
 
