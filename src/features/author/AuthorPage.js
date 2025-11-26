@@ -10,10 +10,10 @@ const AuthorPage = () => (
             body={
                 <>
                     <p>
-                        <strong>Moją pasją jest gra w tenisa</strong>
+                        Cześć! Mam na imię <strong>Kamila</strong> i uwielbiam aktywny tryb życia. Najwięcej radości daje mi <strong>bieganie</strong> oraz regularne treningi <strong>jogi</strong>, które pozwalają mi złapać równowagę po intensywnym dniu.
                     </p>
                     <p>
-                        W wolnym czasie gotuję! <em>Bardzo</em> lubię kuchnię włoską
+                        Uczę się również <em>włoskiego</em> - głównie dlatego, że kocham włoską kulturę i oczywiście <strong>włoskie jedzenie</strong>. Gotowanie to dla mnie czysta przyjemność! </p> <p> W wolnych chwilach dużo czytam, zwłaszcza książki związane z <strong>rozwojem osobistym</strong>. Inspirują mnie i pomagają cały czas iść do przodu.
                     </p>
                 </>
             }

@@ -10,7 +10,7 @@ const App = () => (
     <Navigation />
 
     <Switch>
-      <Route path={toTask({ id: ":id" })}>
+      <Route path={toTask(":id")}>
         <TaskPage />
       </Route>
 
