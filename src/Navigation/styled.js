@@ -8,10 +8,24 @@ export const Wrapper = styled.nav`
     gap: 20px;
 `;
 
+export const NavWrapper = styled.nav`
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    background: ${({ theme }) => theme.colors.primary};
+    padding: 16px;
+`;
+
 export const StyledNavLink = styled(NavLink)`
     color: white;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 16px;
+    font-weight: normal;
+    transition: 0.3s;
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.primaryHover};
+    }
 
     &.active {
         font-weight: bold;

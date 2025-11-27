@@ -1,11 +1,11 @@
 import { toTasks, toAuthor } from "../routes";
-import { StyledNavLink, Wrapper } from "./styled";
+import { StyledNavLink, NavWrapper } from "./styled";
 
 const Navigation = () => (
-    <Wrapper>
+    <NavWrapper>
         <StyledNavLink to={toTasks()}>Zadania</StyledNavLink>
         <StyledNavLink to={toAuthor()}>O autorze</StyledNavLink>
-    </Wrapper>
+    </NavWrapper>
 );
 
 export default Navigation;
