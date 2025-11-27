@@ -4,9 +4,11 @@ import TaskPage from "./features/tasks/TaskPage";
 import AuthorPage from "./features/author/AuthorPage";
 import Navigation from "./Navigation";
 import { toTasks, toAuthor, toTask } from "./routes";
+import { GlobalStyle } from "./GlobalStyle";
 
 const App = () => (
   <HashRouter>
+    <GlobalStyle />
     <Navigation />
 
     <Switch>
