@@ -20,5 +20,9 @@ export const selectTasksByQuery = (state, query) => {
     );
 };
 
+
 export const selectTaskById = (state, taskId) =>
     selectTasks(state).find(task => task.id === taskId);
+
+export const selectLoading = state => state.tasks.loading;
+
