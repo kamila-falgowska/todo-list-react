@@ -7,7 +7,7 @@ import {
 
 import { selectTasks } from "./selectors";
 import { getExampleTasks } from "./getExampleTasks";
-import { saveTasksInLocalStorage } from "../../tasksLocalStorage";
+import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 
 function* fetchExampleTasksHandler() {
     try {
